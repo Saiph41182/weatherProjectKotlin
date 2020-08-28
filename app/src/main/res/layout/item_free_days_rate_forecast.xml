@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_weather_itdrf"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_weather_image_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/image_weather_condition" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_marginStart="16dp"
+            android:id="@+id/daily_date_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            tools:text="Date"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/weather_description_ifdrf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/weather_description_ifdrf" />
+
+        <TextView
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:id="@+id/weather_description_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_weather_itdrf"
+            app:layout_constraintStart_toEndOf="@+id/image_weather_itdrf"
+            app:layout_constraintTop_toTopOf="@+id/image_weather_itdrf"
+            tools:text="Clear"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/daily_weather_temp_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            tools:text="21\u00B0"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="@+id/image_weather_itdrf"
+            app:layout_constraintTop_toBottomOf="@+id/image_weather_itdrf" />
+
+
+        <TextView
+            android:id="@+id/daily_weather_temp_max_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@+id/daily_date_ifdrf"
+            tools:text="25" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#305470"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/daily_weather_temp_min_ifdrf"
+            app:layout_constraintEnd_toEndOf="@+id/daily_weather_temp_min_ifdrf"
+            app:layout_constraintStart_toStartOf="@+id/daily_weather_temp_max_ifdrf" />
+
+        <TextView
+            android:id="@+id/daily_weather_temp_min_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/daily_weather_temp_ifdrf"
+            app:layout_constraintEnd_toEndOf="@+id/daily_date_ifdrf"
+            tools:text="15" />
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/item1"
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="#33000000"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/daily_weather_temp_ifdrf">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_pressure"
+                    android:contentDescription="@string/image_weather_condition" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/pressure"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/daily_pressure_ifdrf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false"
+                    tools:text="1.06 kPa"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/item2"
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#33000000"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/item3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item1"
+            app:layout_constraintTop_toBottomOf="@+id/daily_weather_temp_ifdrf">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="@+id/materialCardView">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_wind_speed"
+                    android:contentDescription="@string/image_weather_condition" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/wind_speed"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/daily_wind_speed__ifdrf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false"
+                    tools:text="15 m/s"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/item3"
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#33000000"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/materialCardView2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item2"
+            app:layout_constraintTop_toBottomOf="@+id/daily_weather_temp_ifdrf">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="@+id/materialCardView">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_humidity"
+                    android:contentDescription="@string/image_weather_condition" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/humidity"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/daily_humidity__ifdrf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false"
+                    tools:text="88 %"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="#33000000"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item3"
+            app:layout_constraintTop_toBottomOf="@+id/daily_weather_temp_ifdrf">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="@+id/materialCardView">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_wind_direction"
+                    android:contentDescription="@string/image_weather_condition" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/wind_dir"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/daily_wind_dir__ifdrf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false"
+                    tools:text="5 Km"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

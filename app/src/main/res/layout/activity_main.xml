@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_screen_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp_weather_screen_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Belarus" />
+
+        <TextView
+            android:id="@+id/main_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Minsk" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:text="@string/comma"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/main_city"
+            app:layout_constraintStart_toEndOf="@+id/main_country"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/main_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_country"
+            tools:text="18 июля" />
+
+        <ImageView
+            android:id="@+id/image_weather_itdrf"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:contentDescription="@string/image_weather_condition"
+            android:src="@drawable/ic_weather_image_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_date" />
+
+        <TextView
+            app:autoSizeTextType="uniform"
+            android:id="@+id/weather_description_ifdrf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_weather_itdrf"
+            app:layout_constraintEnd_toEndOf="@+id/daily_weather_temp_min_ifdrf"
+            app:layout_constraintStart_toEndOf="@+id/image_weather_itdrf"
+            app:layout_constraintTop_toTopOf="@+id/image_weather_itdrf"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="Clear" />
+
+        <TextView
+            android:id="@+id/daily_weather_temp_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="100sp"
+            app:layout_constraintStart_toStartOf="@+id/image_weather_itdrf"
+            app:layout_constraintTop_toBottomOf="@+id/image_weather_itdrf"
+            tools:text="21\u00B0" />
+
+        <TextView
+            android:id="@+id/daily_weather_temp_max_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/daily_weather_temp_min_ifdrf"
+            app:layout_constraintEnd_toEndOf="@+id/daily_weather_temp_min_ifdrf"
+            app:layout_constraintStart_toStartOf="@+id/daily_weather_temp_min_ifdrf"
+            tools:text="25\u00B0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2dp"
+            android:background="#305470"
+            app:layout_constraintBottom_toBottomOf="@+id/daily_weather_temp_max_ifdrf"
+            app:layout_constraintEnd_toEndOf="@+id/daily_weather_temp_max_ifdrf"
+            app:layout_constraintStart_toStartOf="@+id/daily_weather_temp_max_ifdrf"
+            app:layout_constraintTop_toTopOf="@+id/daily_weather_temp_min_ifdrf"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/daily_weather_temp_min_ifdrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/comfortaa_variable_font_wght"
+            android:includeFontPadding="false"
+            android:textSize="25sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/daily_weather_temp_ifdrf"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="15\u00B0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_hourly_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/weather_widjet_background"
+            app:layout_constraintTop_toBottomOf="@+id/daily_weather_temp_ifdrf"
+            tools:layout_editor_absoluteX="342dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottom_sheets_layout"
+        style="?attr/bottomSheetStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheets_background"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="70dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/view_element"
+                android:src="@drawable/bottom_sheets_button_swiper" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="3 days" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="5 days" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

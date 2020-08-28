@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FirstProject</string>
+    <string name="wind_dir">Wind dir</string>
+    <string name="image_weather_condition">image weather condition</string>
+    <string name="pressure">Pressure</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="humidity">Humidity</string>
+    <string name="degree_symbol">%1$s\u00B0</string>
+    <string name="comma">,</string>
+    <string name="view_element">view element</string>
+</resources>

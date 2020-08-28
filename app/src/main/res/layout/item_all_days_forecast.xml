@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:fontFamily="@font/comfortaa_font_family"
+            android:includeFontPadding="false"
+            android:id="@+id/all_daily_date_iadrf"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            tools:text="Date"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa_font_family"
+                android:id="@+id/all_days_temp_iadrf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="25\u00B0"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_marginStart="8dp"
+                android:id="@+id/all_days_weather_image_iadrf"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_weather_image_placeholder"
+                android:contentDescription="@string/image_weather_condition" />
+
+        </LinearLayout>
+
+        <TextView
+            android:fontFamily="@font/comfortaa_font_family"
+            android:id="@+id/all_days_min_temp_iadrf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            tools:text="15\u00B0"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
